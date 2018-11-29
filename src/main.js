@@ -12,7 +12,7 @@ import './css/common.scss';
 var vm=new Vue({
 	 el: '#app2',
   data: {
-   message: 'Hello Vue!2'
+   message: 'Hello Vue!3'
   }
 })
 new Vue({
