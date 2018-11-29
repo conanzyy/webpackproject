@@ -99,7 +99,8 @@ module.exports = {
 	
 }
 
-if (process.env.NODE_ENV === 'production') {
+//process.env.NODE_ENV === 'production'
+if (true) {
     module.exports.devtool = '#source-map';
     module.exports.plugins = (module.exports.plugins || []).concat([
       new webpack.DefinePlugin({
@@ -107,6 +108,6 @@ if (process.env.NODE_ENV === 'production') {
           NODE_ENV: '"production"'
         }
       }),
-      new webpack.optimize.UglifyJsPlugin(),
+     // new webpack.optimize.UglifyJsPlugin(),
     ])
   }
