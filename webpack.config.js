@@ -5,14 +5,15 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 module.exports = {
   entry: {main: __dirname + "/src/main.js",//已多次提及的唯一入口文件
       vendor: [
-          'vue',
-          'jquery'
+          'vue'
+          //,'jquery'
       ]
   },
   output: {
     path: __dirname + "/build",//打包后的文件存放的地方
-    filename: "bundle-[hash].js"//打包后输出文件的文件名
+    //filename: "bundle-[hash].js"//打包后输出文件的文件名
 	//filename: "bundle.js"//打包后输出文件的文件名
+      filename: "[name]-[hash].js"
   },
   devtool: 'eval-source-map',
   devServer: {
@@ -25,7 +26,7 @@ module.exports = {
  resolve: {
         alias: {
             'vue$': 'vue/dist/vue.esm.js'
-            ,'jquery1': './js/jquery1.js'
+            ,'jquery': './js/jquery.min.js'
         }
     },
  module: {
