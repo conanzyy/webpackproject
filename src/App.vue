@@ -23,7 +23,7 @@ export default {
   methods: {
      async fetchData() {
       const data = await getData();
-      this.msg = data;
+     // this.msg = data;
     }
   }
 }
