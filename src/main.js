@@ -1,5 +1,7 @@
 // main.js
 import $ from 'jquery';
+//global.$ = window.$;
+//const $ = window.jQuery; //window.$
 import React from 'react';
 //import {render} from 'react-dom';
 import Greeter from './Greeter';

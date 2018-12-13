@@ -11,13 +11,17 @@ module.exports = {
   },
   output: {
     path: __dirname + "/build",//打包后的文件存放的地方
-    //filename: "bundle-[hash].js"//打包后输出文件的文件名
+    //  publicPath: "/build/",
+      //filename: "bundle-[hash].js"//打包后输出文件的文件名
 	//filename: "bundle.js"//打包后输出文件的文件名
       filename: "[name]-[hash].js"
   },
+    externals: {
+        jquery: "jQuery"
+    },
   devtool: 'eval-source-map',
   devServer: {
-    contentBase: "./public",//本地服务器所加载的页面所在的目录
+    contentBase: "./build",//本地服务器所加载的页面所在的目录
     historyApiFallback: true,//不跳转
     inline: true,//实时刷新
 	 hot: true,
@@ -26,7 +30,7 @@ module.exports = {
  resolve: {
         alias: {
             'vue$': 'vue/dist/vue.esm.js'
-            ,'jquery': './js/jquery.min.js'
+            //,'jquery': './js/jquery.min.js'
         }
     },
  module: {
